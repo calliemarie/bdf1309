@@ -1,0 +1,15 @@
+<?
+for each($data as $){
+?>
+
+<center>
+<form action="?action=updateaction&id=<?=$d["id"]?>" method="post">
+<input type='text' name='book' value="<?=$d["title"]?>"/>
+<br><input type='text' name='author' value="<?=$d["author"]?>"/>
+<br><input type='text' name='genre' value="<?=$d["genre"]?>"/>
+<br><input type='text' name='read' value="<?=$d["howRead"]?>"/>
+<br><input type="Submit" value="Update"/>
+</form>
+</center>
+<? } ?>
+
