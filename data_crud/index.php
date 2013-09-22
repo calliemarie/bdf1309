@@ -9,4 +9,8 @@ $rows = $model->getBooks();
 $view = new bookView();
 $view->showHeader('Bookworm');
 $view->showLatest($rows);
+
+echo '<a href="addBook.php">Add Book</a>';
+
+
 $view->showFooter();

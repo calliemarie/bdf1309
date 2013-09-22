@@ -10,6 +10,9 @@ $rows = $model->getDetails($_GET['isbn']);
 
 $view->showHeader('BookWorm');
 $view->showDetail($rows);
+
+echo '<a href="views/updateform.html">Edit Book</a>';
+
 $view->showFooter();	
 
 
