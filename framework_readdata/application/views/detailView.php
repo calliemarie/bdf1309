@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CoderIgniter Framework</title>
+<title>CodeIgniter Framework</title>
 </head>
 <body>
 <h1>MVC Frameworks Read Data</h1>
+<h2>Book Details</h2>
 <?php
 
 foreach($details as $detail){

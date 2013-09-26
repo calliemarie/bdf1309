@@ -3,8 +3,9 @@
 <head>
 <title>MVC Read Data Frameworks</title>
 </head>
+<body style="background-color:lightgray;">
 <body>
-	<h1>BookWorm</h1>
+	<h1 style ="color:purple;">BookWorm</h1>
 	<p>A place to remember your favorite books</p>
 	<?php
 	foreach($rows as $row){
