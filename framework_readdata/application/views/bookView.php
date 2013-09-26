@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo $title; ?></title>
+<title>MVC Read Data Frameworks</title>
 </head>
 <body>
-	<div id="wrapper">
-		<h1><?php echo $heading; ?></h1>
-		<h2>Home Page</h2>
-		<?php foreach ($query->result() as $row); ?>
-		
-		<h3><?php echo anchor('main/details/' . $row->isbn, $row->title); ?></h3>
-		<?php endforeach;?>
-	</div>
+	<?php
+	foreach($rows as $row){
+		echo "<li><a href='read/details/".$row->isbn."'>$row->title</a></li>";
+	}
+	?>
 </body>
 </html>

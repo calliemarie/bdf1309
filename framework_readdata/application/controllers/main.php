@@ -1,18 +1,21 @@
 <?php
 
 class Main extends CI_Controller{
-	function index(){
-		$data['title'] = 'Bookworm';
-		$data['heading'] = 'Bookworm';
-		$data['query'] = $this->db->get('book');
+
+	public function index(){
+		$this->home();
 	}
 	
-	function details($isnb){
-		$data['title'] = 'Bookworm Details';
-		$data['heading'] = 'Bookworm';
-		$data['query'] = $this->db->get_where('book', array('isbn'=>$isbn));
-		
-		$this->load->view('detailView', $data);
+	public function home(){
+		$this->load->model('bookModel');
+		$data['rows'] = $this->bookModel->get_books();
+		$this->load->view('bookView', $data);
+	}
+	
+	public function details(){
+		$this->load->model('bookModel');
+		$details['details'] = $this->bookModel->get_book($this->uri->segment(3));
+		$this->load->view('detailView', $details);
 	}
 }
 
