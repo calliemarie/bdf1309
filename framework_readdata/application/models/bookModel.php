@@ -2,9 +2,6 @@
 
 class bookModel extends CI_Model {
 
-	public function __construct(){
-		$this->load->database();
-	}
 	
 	public function get_books(){
 		$q = $this->db->get('book');
@@ -17,7 +14,7 @@ class bookModel extends CI_Model {
 	}
 	
 	function get_book($isbn=''){
-		$sql= "SELECT * FROM book WHERE isbn = ?";
+		$sql= "SELECT * FROM book WHERE ISBN = ?";
 		$l = $this->db->query($sql, array($isbn));
 			if($l->num_rows>0){
 				foreach($l->result()as $detail){

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo $title; ?></title>
+<title>CoderIgniter Framework</title>
 </head>
 <body>
 <h1>MVC Frameworks Read Data</h1>
@@ -15,7 +15,7 @@ foreach($details as $detail){
 	echo '<li>'.$detail->review. '</li>';
 	echo '<br />';
 
-}
+
 ?>
 
 </body>
